@@ -449,7 +449,7 @@ a{
     color: #9597A5;
     
 }
-@media only screen and (max-width: 1024px) {
+@media only screen and (max-width: 1095px) {
     .why-choose__list{
         flex-wrap: wrap;
         justify-content: center;
@@ -538,28 +538,18 @@ a{
     }
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
 /* latest articles start */
 
 .latest-articles {
     padding: 80px 0;
-    background-color: #F2F2F2;
+    background-color: #FAFAFA;
 }
 .latest-articles__title {
     font-weight: 100;
     font-size: 40px;
     line-height: 64px;
+    margin-top: 0;
+    margin-bottom: 40px;
     letter-spacing: -0.714286px;
     color: #2D314D;
 }
@@ -567,62 +557,25 @@ a{
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    justify-content: space-between;
 }
 .latest-articles__item {
-    width: 255px;
-    padding:  0 25px 25px 25px;
-    margin-right: 30px;
+    max-width: 255px;
     background: #FFFFFF;
     border-radius: 5px;
 }
 .latest-articles__item:last-child{
     margin-right: 0;
 }
-.latest-articles__item::before{
-    position: absolute;
-    left: calc(50% - 556px);
-    width: 255px;
-    height: 200px;
-    background-image: url("../image/money.jpg");
-    background-size: 255px 200px;
-    border-radius: 5px 5px 0px 0px;
-    content: "";  
-}
-.latest-articles__item:nth-child(2):before{
-    position: absolute;
-    left: calc(50% - 271px);
-    width: 255px;
-    height: 200px;
-    background-image: url("../image/restaurant.jpg");
-    background-size: 255px 200px;
-    border-radius: 5px 5px 0px 0px;
-    content: "";  
-}
-.latest-articles__item:nth-child(3):before{
-    position: absolute;
-    left: calc(50% + 16px);
-    width: 255px;
-    height: 200px;
-    background-image: url("../image/plane.jpg");
-    background-size: 255px 200px;
-    border-radius: 5px 5px 0px 0px;
-    content: "";  
-}
-.latest-articles__item:nth-child(4):before{
-    position: absolute;
-    left: calc(50%  + 301px);
-    width: 255px;
-    height: 200px;
-    background-image: url("../image/happy.jpg");
-    background-size: 255px 200px;
-    border-radius: 5px 5px 0px 0px;
-    content: "";  
+.latest-articles__item-inner{
+    padding:  0 24px 24px 24px;
+    
 }
 .latest-articles__item-text {
     display: inline-block;
     font-size: 10px;
     line-height: 18px;
-    margin-top: 225px;
+    margin-top: 25px;
     margin-bottom: 8px;
     color: #9597A5;
 }
@@ -646,6 +599,52 @@ a{
     margin-top: 0;
     margin-bottom: 0;
 }
+@media only screen and (max-width: 768px) {
+    .latest-articles{
+        padding: 88px 0;
+    }
+    .latest-articles__title{
+        font-size: 32px;
+        line-height: 38px;
+        text-align: center;
+        margin-bottom: 31px;
+    }
+    .latest-articles__list {
+        
+        flex-direction: column;
+        align-items: center;
+    }
+    .latest-articles__item{
+        max-width: 327px;
+    }
+    .latest-articles__item:not(:last-child){
+        margin-right: 0;
+        margin-bottom: 24px;
+    }
+}
+
+@media only screen and (max-width: 1095px) {
+    .latest-articles__title{
+        text-align: center;
+    }
+    .latest-articles__list {
+        flex-wrap: wrap;
+        justify-content: space-between;
+        max-width: 540px;
+        margin: 0 auto;
+    }
+    .latest-articles__item {
+        margin: 0;
+        max-width: 255px;
+    }
+    .latest-articles__item:nth-child(1) {
+        margin-bottom: 24px;
+    }
+    .latest-articles__item:nth-child(2) {
+        margin-bottom: 24px;
+    }
+}
+
 
 /* site footer start */
 .site-footer {
@@ -732,4 +731,33 @@ a{
     text-align: right;
     color: #FFFFFF;
     opacity: 0.5;
+}
+
+@media only screen and (max-width: 768px) {
+    .site-footer__wrapper{
+        flex-direction: column;
+    }
+    .site-footer__inner{
+        margin-bottom: 32px;
+    }
+    .site-footer__social-list{
+        margin-top: 32px;
+    }
+    .site-footer__list-wrapper{
+        flex-direction: column;
+        margin-bottom: 32px;
+    }
+    .site-footer__social-item:not(:last-child){
+        margin-right: 16px;
+    }
+    .site-footer__list{
+        margin: 0;
+    }
+    .site-footer__item{
+        text-align: center;
+    }
+    .site-footer__link{
+        margin: 0 auto;
+        margin-bottom: 24px;
+    }
 }
